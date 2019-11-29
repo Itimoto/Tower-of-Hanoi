@@ -23,22 +23,22 @@ public class Ring {
 		
 		g.setColor(this.color);
 		
-		x = 140 + 250*(column-1) - 10*size; //Center of Base + Offset Base - Width Offset (to Center)   
+		x = 140 + 250*(column) - 10*size; //Center of Base + Offset Base - Width Offset (to Center)   
 		y = 380 - 20*(stack); //I'm... a modular Tower of Hanoi is /not/ the focus of this exercise. This is a driver, for heck's sake.
 		
 		g.fillRoundRect(x, y, width, 20, 10, 10);
 		
 	}
 	
-	public void moveRing(LinkedList<Ring> oldColumn, LinkedList<Ring> newColumn, int columnIndex) {
-		newColumn.add(this);
-		stack = newColumn.indexOf(this)+1;
-		column = columnIndex;
+	public void moveRing(LinkedList<Ring>[] columnArray, int start, int end) {
+		columnArray[end].add(this);
+		stack = columnArray[end].indexOf(this)+1;
+		column = end;
 		
-		oldColumn.removeLast(); //'First' is the top ring
+		columnArray[start].removeLast(); //'First' is the top ring
 		
-		for(int i = 0; i < oldColumn.size(); i++) {
-			oldColumn.get(i).setStack(i+1); //Move the rest of the rings down
+		for(int i = 0; i < columnArray[start].size(); i++) {
+			columnArray[start].get(i).setStack(i+1); //Move the rest of the rings down
 										  //Because, y'know, Gravity.
 		}
 	}
@@ -48,6 +48,10 @@ public class Ring {
 		//however, implementing it would mean overhauling the already-finicky positioning code. 
 		//We're leaving it in and leaving it up to the handler to take care of reassigning the stack
 		// order.
+		//From Future-Past Me: I figured it out nevermind
+	}
+	public void setColumn(int newColumn) {
+		column = newColumn;
 	}
 	
 }
