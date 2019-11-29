@@ -40,9 +40,9 @@ public class HanoiGame extends Canvas {
 		LinkedList<Ring> columnB = new LinkedList<Ring>();
 		LinkedList<Ring> columnC = new LinkedList<Ring>();
 		
-		for(int i = 9, j = 0; i > 0; i--, j++) {
-			columnA.add(new Ring(i, 1, i));
-			//columnA.get(j).drawRing(g);
+		for(int i = 9, j = 1; i > 0; i--, j++) {
+			columnA.add(new Ring(i, 1, j));
+			columnA.get(j-1).drawRing(g);
 		}
 		
 		columnA.getLast().moveRing(columnA, columnB, 2);
@@ -50,7 +50,7 @@ public class HanoiGame extends Canvas {
 		
 		for(int i = 9, j = 0; i > 0; i--, j++) {
 		//	columnA.add(new Ring(i, 1, i));
-			columnA.get(j).drawRing(g);
+		//	columnA.get(j).drawRing(g);
 		}
 		
 	}
