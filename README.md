@@ -51,8 +51,27 @@ But it's not, 'innit? Nay. But that *is* the Base Case, which is what we move at
 
 #### Hurry It Up, Will You?
 Fine.
-There are 3 Steps to Moving One Stack from one Column to Another (a *Target* Column):
-1. Move the Stack Above It To a Different Column
-- This is the *Swap*, or *Temporary* Column.
-- We need this so that the Stack in question (or: Ring in question / bottom-most Ring) can move to its *Target* Column
-2. 
+There are 3 Steps to Moving One Ring from one Column (the *Position* Column) to Another (a *Target* Column):
+1. Move the Stack Above it to a Different Column
+   - This is the *Swap*, or *Temporary* Column.
+   - We need this so that the Stack in question (or: Ring in question / bottom-most Ring) can move to its *Target* Column
+   - With the 'first' movement, we define the *Swap* Column as the Column that isn't the *Position* or *Target* Column
+2. Move the Ring to the *Target* Column
+   - Now, everything's set. But what about the rest of Stacks? They're all at the *Swap*! 
+   - Well...
+3. Move the Previous Stack on Top of the Ring (i.e. Place it onto the *Target* Column)
+   - Now, let's think about this carefully. The Previous Stack needs its **own** *Swap* Column. What'll it be?
+   - Well, the Previous Stack is in the Current Ring's/Stack's *Swap* Column. 
+     - Thus: The Previous Stack's *Position* Column is defined as the Current Stack's *Swap* Column
+   - And we know that the Previous Stack's *Target* Column is the Current Stack's *Target* Column
+     - Thus: The Previous Stack's *Target* Column is defined as the Current Stack's *Target* Column
+   - Process-of-Elimination leaves us with only one other option for the Previous Stack's *Swap* Column:
+     - Thus: The Previous Stack's *Swap* Column is defined as the Current Stack's *Position* Column
+    
+Now, when the 'Stack Above' is equal to a Stack of 1, *that's* when we've reached our Base Case, and *that's* when we move our stack.
+
+Ultimately, the key here is to know *how* to change the *Position*, *Swap*, and *Target* Columns. But once you've got the process of elimination down, *that's* when it clicks.
+
+At least, that's when it clicked for me.
+
+Enjoy!
