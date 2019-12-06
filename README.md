@@ -4,9 +4,12 @@
 # What's The *Tower of Hanoi?*
 It's a puzzle. You've got three columns, one of which is filled up with rings, stacked Smallest to Largest, Top to Bottom (respectively).
 The rules, according to trusty [Wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi), are as follows:
-1. Only one disk can be moved at a time.
-2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
-3. No larger disk may be placed on top of a smaller disk
+>1. Only one disk can be moved at a time.
+>2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
+>3. No larger disk may be placed on top of a smaller disk
+
+![](hanoi.gif)
+>*like this, see?*
 
 
 # Why'd You Make This... Thing? You're *Reinventing The Wheel*
@@ -40,4 +43,11 @@ I am not that wise fella; nor am I a wise fella. But y'know what? Let me give yo
 
 You've got a Stack of Rings, yeah?
 
-There's more than 1 Ring, yeah? ('cause if there was
+There's more than 1 Ring, yeah? ('cause if there was only 1, this'd be a piece of cake)
+```
+Ring.move(here, there);
+```
+But it's not, 'innit? Nay. But that *is* the Base Case, which is what we move at the end.
+
+#### Hurry It Up, Will You?
+Fine.
