@@ -35,7 +35,7 @@ For a mind-melding journey through recursion
 </br>You may be wondering why I didn't export this as an executable. I, too, wonder.
 </br>Y'see: I, midst the throes of a late-night figuring-out-how-to-make-rectangles-appear-on-the-screen-session that simply *couldn't* wait, decided that implementing a MouseHandler to click through the solver's steps would make the project take far too long just to try out the *main attraction*—namely, the *recursive solver*
 
-# Fine, But How Does It *Solve?*
+# Alright, So How Does It *Solve?*
 A wise fella once said
 >I dunno
 
@@ -51,3 +51,8 @@ But it's not, 'innit? Nay. But that *is* the Base Case, which is what we move at
 
 #### Hurry It Up, Will You?
 Fine.
+There are 3 Steps to Moving One Stack from one Column to Another (a *Target* Column):
+1. Move the Stack Above It To a Different Column
+- This is the *Swap*, or *Temporary* Column.
+- We need this so that the Stack in question (or: Ring in question / bottom-most Ring) can move to its *Target* Column
+2. 
