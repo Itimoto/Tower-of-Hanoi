@@ -52,14 +52,14 @@ But it's not, 'innit? Nay. But that *is* the Base Case, which is what we move at
 #### Hurry It Up, Will You?
 Fine.
 There are 3 Steps to Moving One Ring from one Column (the *Position* Column) to Another (a *Target* Column):
-1. Move the Stack Above it to a Different Column
+1. **Move the Stack Above it to a Different Column**
    - This is the Current Ring's/Stack's *Swap*, or *Temporary* Column.
    - We need this so that the Current Ring/Stack (or: bottom-most Ring) can move to its *Target* Column
    - With the 'first' movement, we define the Current *Swap* Column as the Column that isn't the *Position* or *Target* Column
-2. Move the Ring to the *Target* Column
+2. **Move the Ring to the *Target* Column**
    - Now, everything's set. But what about the rest of Stacks? They're all at the *Swap*! 
    - Well...
-3. Move the Previous Stack on Top of the Ring (i.e. Place it onto the *Target* Column)
+3. **Move the Previous Stack on Top of the Ring (i.e. Place it onto the *Target* Column)**
    - Now, let's think about this carefully. The Previous Stack needs its **own** *Swap* Column. What'll it be?
    - Well, the Previous Stack is in the Current Ring's/Stack's *Swap* Column. 
      - Thus: The Previous Stack's *Position* Column is defined as the Current Stack's *Swap* Column
