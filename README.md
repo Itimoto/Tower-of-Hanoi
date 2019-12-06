@@ -1,5 +1,13 @@
 # Tower of Hanoi
-## A Recursive Solver! *(And Graphics Driver!)*
+#### A Recursive Solver! *(And Graphics Driver!)*
+
+# What's The *Tower of Hanoi?*
+It's a puzzle. You've got three columns, one of which is filled up with rings, stacked Smallest to Largest, Top to Bottom (respectively).
+The rules, according to trusty [Wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi), are as follows:
+1. Only one disk can be moved at a time.
+2. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
+3. No larger disk may be placed on top of a smaller disk
+
 
 # Why'd You Make This... Thing? You're *Reinventing The Wheel*
 I wanted to challenge myself and figure out what all that jazz about *recursion* was really about. Up until this project, recursion was kinda funky. Now, it's slightly less funky
@@ -21,11 +29,15 @@ That'll step through each step. Press and hold
 For a mind-melding journey through recursion
 >Enjoy!
 
-You may be wondering why I didn't export this as an executable. I, too, wonder.
-</br>Y'See, I, midst the throes of a late-night figuring-out-how-to-make-rectangles-appear-on-the-screen-session that simply *couldn't* wait, decided that implementing a MouseHandler to click through the solver's steps would make the project take far too long just to try out the *main attraction*—namely, the *recursive solver*
+</br>You may be wondering why I didn't export this as an executable. I, too, wonder.
+</br>Y'see: I, midst the throes of a late-night figuring-out-how-to-make-rectangles-appear-on-the-screen-session that simply *couldn't* wait, decided that implementing a MouseHandler to click through the solver's steps would make the project take far too long just to try out the *main attraction*—namely, the *recursive solver*
 
 # Fine, But How Does It *Solve?*
 A wise fella once said
 >I dunno
 
 I am not that wise fella; nor am I a wise fella. But y'know what? Let me give you a quick breakdown:
+
+You've got a Stack of Rings, yeah?
+
+There's more than 1 Ring, yeah? ('cause if there was
