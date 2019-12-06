@@ -22,7 +22,7 @@ I wanted to challenge myself and figure out what all that jazz about *recursion*
 
 # How Do I Try This Out?
 Fire up a current(-ish) version of your Eclipse IDE, and stick these *.java* files into a new Java Project.
-</br>*Name it something cool. For me, your friend.*
+</br>* and name it something cool. For me, your friend.*
 </br>Then, hit 'Run' (or fn+F11); Pull up the Console, and hit 
 >Enter
 
@@ -33,7 +33,7 @@ For a mind-melding journey through recursion
 >Enjoy!
 
 </br>You may be wondering why I didn't export this as an executable. I, too, wonder.
-</br>Y'see: I, midst the throes of a late-night figuring-out-how-to-make-rectangles-appear-on-the-screen-session that simply *couldn't* wait, decided that implementing a MouseHandler to click through the solver's steps would make the project take far too long just to try out the *main attraction*—namely, the *recursive solver*
+</br>Y'see: I, midst the throes of a late-night figuring-out-how-to-make-rectangles-appear-on-the-screen-session that simply *couldn't* wait 'till the morn', decided that implementing a MouseHandler to click through the solver's steps would make the project take far too long just to try out the *main attraction*—namely, the *recursive solver*
 
 # Alright, So How Does It *Solve?*
 A wise fella once said
@@ -53,9 +53,9 @@ But it's not, 'innit? Nay. But that *is* the Base Case, which is what we move at
 Fine.
 There are 3 Steps to Moving One Ring from one Column (the *Position* Column) to Another (a *Target* Column):
 1. Move the Stack Above it to a Different Column
-   - This is the *Swap*, or *Temporary* Column.
-   - We need this so that the Stack in question (or: Ring in question / bottom-most Ring) can move to its *Target* Column
-   - With the 'first' movement, we define the *Swap* Column as the Column that isn't the *Position* or *Target* Column
+   - This is the Current Ring's/Stack's *Swap*, or *Temporary* Column.
+   - We need this so that the Current Ring/Stack (or: bottom-most Ring) can move to its *Target* Column
+   - With the 'first' movement, we define the Current *Swap* Column as the Column that isn't the *Position* or *Target* Column
 2. Move the Ring to the *Target* Column
    - Now, everything's set. But what about the rest of Stacks? They're all at the *Swap*! 
    - Well...
