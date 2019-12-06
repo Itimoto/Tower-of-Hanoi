@@ -17,9 +17,7 @@ public class HanoiGame extends Canvas {
 	}
 	
 	public void paint(Graphics g){
-		
 		g.setColor(Color.DARK_GRAY);
-		
 		for(int i = 0; i < 3; i++) {
 			
 			g.fillRect(50+(i*250), 380, 200, 20); //Bases
@@ -27,31 +25,16 @@ public class HanoiGame extends Canvas {
 			
 		}
 		
-		g.setColor(Color.blue);
-		//for(int width = 180, x = 60, y = 360; width >= 40; width-=20, x+=10, y-=20) {
-			//g.fillRoundRect(x, y, width, 20, 10, 10);
-		//}
-		
-		//for(int i = 1; i < 10; i++) {
-			//Ring mofo = new Ring(i, 1, i);
-			//mofo.drawRing(g);
-		//}
-		LinkedList<Ring> columnA = new LinkedList<Ring>();
-		LinkedList<Ring> columnB = new LinkedList<Ring>();
-		LinkedList<Ring> columnC = new LinkedList<Ring>();
-		
-		for(int i = 9, j = 1; i > 0; i--, j++) {
-			columnA.add(new Ring(i, 1, j));
-			columnA.get(j-1).drawRing(g);
+		LinkedList<Ring>[] allColumns = new LinkedList[3];
+		for(int i = 0; i < 3; i++) { //initialize elements of the array before manipulating them
+			allColumns[i] = new LinkedList<Ring>();
 		}
 		
-		columnA.getLast().moveRing(columnA, columnB, 2);
-		columnB.getLast().drawRing(g);
-		
-		for(int i = 9, j = 0; i > 0; i--, j++) {
-		//	columnA.add(new Ring(i, 1, i));
-		//	columnA.get(j).drawRing(g);
+		for(int size = 9, stackIndex = 1; size > 0; size--, stackIndex++) {
+			allColumns[0].add(new Ring(size, 0, size, g));
+			allColumns[0].get(stackIndex-1).drawRing();
 		}
 		
-	}
+		Solver.moveStack(9 ,0 , 1, 2, allColumns);		
+	}	
 }
