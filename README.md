@@ -22,7 +22,7 @@ I wanted to challenge myself and figure out what all that jazz about *recursion*
 
 # How Do I Try This Out?
 Fire up a current(-ish) version of your Eclipse IDE, and stick these *.java* files into a new Java Project.
-</br>* and name it something cool. For me, your friend.*
+</br>*and name it something cool. For me, your friend.*
 </br>Then, hit 'Run' (or fn+F11); Pull up the Console, and hit 
 >Enter
 
